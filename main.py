@@ -104,11 +104,11 @@ def main():
         key = pygame.key.get_pressed()
 
         if game_paused:
-            if key[pygame.K_SPACE]:
-                if points > get_high_score():
-                    write_new_high_score(points)
-                    high_score = points
+            if points > get_high_score():
+                write_new_high_score(points)
+                high_score = points
 
+            if key[pygame.K_SPACE]:
                 current_speed = 5
                 max_distance_between_obstacles = 70
                 min_distance_between_obstacles = max_distance_between_obstacles
